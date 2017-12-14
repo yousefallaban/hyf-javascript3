@@ -1,0 +1,24 @@
+  getDirector()
+  getRating()
+  rate()
+  // ... Add yours :-) Look to IMDB for inspiration
+}
+
+Staff {
+  getName()
+  getRole()
+  getAge()
+  // ... Add yours :-) Look to IMDB for inspiration
+}
+
+// Initialize the objects
+// by pick your favorite movie from http://www.imdb.com/
+// and make sure that the following actions would works.
+console.log(InstanceMovie.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
+const director = InstanceMovie.getDirector();
+console.log(`Director: ${director.getName()}`);
+// Be creative with this let's see what you come up with :-)
+
+
+If you get bored, template them and make a page by rendering the results on a html :slightly_smiling_face:
+with something like `document.querySelector('.move').innerHTML = MovieHTML` (edited)
