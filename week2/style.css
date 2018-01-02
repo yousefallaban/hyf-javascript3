@@ -1,7 +1,3 @@
-.fa {
-    display: block;
-}
-
 *,
 body {
     margin: 0;
@@ -10,8 +6,57 @@ body {
     font-family: 'Fira Sans', sans-serif;
     font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
+/*------.menu-header------------*/
 
-.logo {
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.menu-header {
+    width: -webkit-fill-available;
+    background: rgba(16, 16, 16, 0.72);
+    color: #ffffff;
+    padding-top: 10px;
+    min-height: 50px;
+}
+
+.menu-header ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu-header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+.menu-header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.menu-header #logo {
+    float: left;
+}
+
+.menu-header #logo h1 {
+    margin: 0px;
+}
+
+.menu-header nav {
+    float: right;
+}
+
+.menu-header .highlight,
+.menu-header a:hover {
+    font-weight: bold;
+}
+
+/* .logo {
     float: left;
     margin: -8px auto;
 }
@@ -22,7 +67,7 @@ body {
     border: 2px solid;
     text-align: center;
     padding: 2.5vh;
-}
+} */
 
 .searchContainer {
     text-align: center;
