@@ -1,0 +1,189 @@
+.fa {
+    display: block;
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.logo {
+    float: left;
+    margin: -8px auto;
+}
+
+.gitHubNav {
+    background: rgba(7, 7, 7, 0.856);
+    color: white;
+    border: 2px solid;
+    text-align: center;
+    padding: 2.5vh;
+}
+
+.searchContainer {
+    text-align: center;
+    margin: 1%;
+}
+
+.searchContainer h1,
+.searchContainer p {
+    padding-bottom: 10px;
+}
+
+.userCardHeader {
+    padding: 1%;
+    /* background: black;
+    color: white; */
+    margin: 0px;
+    text-align: center;
+}
+
+#searchUser {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    width: 40%;
+    background: #f1f1f1;
+}
+
+#search {
+    width: 10%;
+    padding: 10px;
+    background: #313131;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+#search:hover {
+    background: #000000;
+}
+
+#search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#user img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.userCard {
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    float: left;
+    width: 21%;
+    display: block;
+    /* border: 1px solid; */
+    padding: 1%;
+    margin: 2%;
+}
+
+.title {
+    color: grey;
+    padding-bottom: 5%;
+    /* display: inherit; */
+    /* padding-left: 10px; */
+}
+
+.userName {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.userCard button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 5px;
+}
+
+
+/* a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+} */
+
+.userCard button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+#repos {
+    float: left;
+    width: 50%;
+    padding: 1%;
+    margin: 2%;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#repoList {
+    float: left;
+}
+
+.repoListItem {
+    list-style-type: none;
+    margin: 1%;
+    padding: 2%;
+    border-bottom: 1px solid #afaaaa;
+}
+
+.reposDescription {
+    font-size: 68%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.reposName {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.repoInfo {
+    padding-right: 10%;
+}
+
+#committers {
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.committerImg {
+    width: 50%;
+    display: block;
+    float: left;
+    margin-right: 10%;
+}
+
+.committerItem {
+    float: left;
+    width: 27%;
+    padding: 1%;
+    margin: 1% 2%;
+    list-style-type: none;
+    border-bottom: 1px solid #b7b0b2;
+}
+
+.committerItem a {
+    text-transform: capitalize;
+    font-size: 72%;
+    display: block;
+    padding-top: 5%;
+}

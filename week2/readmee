@@ -1,0 +1,8 @@
+Homework assignment :
+Create a single-page application with a text box and a submit button.
+When the user types a github username into the text box, 
+the page should (without refreshing) display a list of all repos for that github user,
+as well as the most recent committers name and photo.
+If a new github username is typed in (and the submit button pressed),
+the page should clear existing contents and replace it with the repo information for the newer user.
+

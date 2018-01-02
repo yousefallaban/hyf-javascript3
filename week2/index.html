@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>gitHub App</title>
+</head>
+
+<body>
+
+<h1 class="gitHubNav">
+<i class="fa fa-github fa-2x logo" aria-hidden="true"></i>Github Finder</h1>
+    <div class="searchContainer">
+        <h1>Search Github Users</h1>
+<p>Enter a username to fetch a users profile info , repos and committers</p>
+        <form action="gitHubSearch" class="gitHubSearch">
+            <input type="text" id="searchUser" placeholder="Enter Github Username..">
+            <input type="button" id="search" value="Search">
+        </form>
+    </div>
+<div id="user"></div>
+<div id="repos">
+    <ul id="reposList"></ul>
+</div>
+<div id="committers">
+    <ul id="committersList"></ul>
+</div>
+<script src="gitHubApp.js"></script>
+<script src="https://use.fontawesome.com/4ae9d00704.js"></script>
+</body>
+
+</html>
