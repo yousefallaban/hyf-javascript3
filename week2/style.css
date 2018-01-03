@@ -6,6 +6,8 @@ body {
     font-family: 'Fira Sans', sans-serif;
     font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
+
+
 /*------.menu-header------------*/
 
 .container {
@@ -22,38 +24,12 @@ body {
     min-height: 50px;
 }
 
-    .navitem ul {
-    padding: 0px;
-    margin: 0px;
-}
-
-    .navitem ul li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-     .navitem ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-    .menu-header .container #logo {
+.menu-header .container #logo {
     float: left;
 }
 
-    .menu-header .container #logo h1 {
+.menu-header .container #logo h1 {
     margin: 0px;
-}
-
-    .navitem {
-    float: right;
-}
-
-.menu-header .highlight,
-.menu-header a:hover {
-    font-weight: bold;
 }
 
 .searchContainer {
@@ -64,30 +40,32 @@ body {
 .searchContainer h1,
 .searchContainer p {
     padding-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 .userCardHeader {
     padding: 1%;
-    /* background: black;
-    color: white; */
     margin: 0px;
     text-align: center;
 }
 
+.repoUserName {
+    font-size: 0.9rem;
+}
+
 #searchUser {
     padding: 10px;
-    font-size: 17px;
+    font-size: 0.9rem;
     border: none;
     width: 40%;
     background: #f1f1f1;
 }
 
 #search {
-    width: 10%;
+    width: 15%;
     padding: 10px;
     background: #313131;
     color: white;
-    font-size: 17px;
     border: none;
     cursor: pointer;
 }
@@ -110,9 +88,8 @@ body {
 .userCard {
     box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
     float: left;
-    width: 21%;
+    width: 100%;
     display: block;
-    /* border: 1px solid; */
     padding: 1%;
     margin: 2%;
 }
@@ -120,8 +97,7 @@ body {
 .title {
     color: grey;
     padding-bottom: 5%;
-    /* display: inherit; */
-    /* padding-left: 10px; */
+    font-size: 0.9rem;
 }
 
 .userName {
@@ -134,6 +110,7 @@ body {
     outline: 0;
     display: inline-block;
     padding: 8px;
+    margin-left: 8%;
     color: white;
     background-color: #000;
     text-align: center;
@@ -142,32 +119,40 @@ body {
     border-radius: 5px;
 }
 
-
-/* a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-} */
-
 .userCard button:hover,
 a:hover {
     opacity: 0.7;
 }
 
-#repos {
+.reposListItem:hover {
+    box-shadow: 1px 1px #00000008, -2px 0px 0px 0px #85868821, 3px 3px #e9ebec;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+#user {
     float: left;
-    width: 50%;
+    width: 24%;
+    margin-left: 1%;
+}
+
+#repos {
+    float: right;
+    width: 70%;
     padding: 1%;
     margin: 2%;
     padding-top: 0;
     margin-top: 0;
 }
 
-#repoList {
-    float: left;
-}
 
-.repoListItem {
+/* #reposList {
+    float: left;
+} */
+
+.reposListItem {
+    float: left;
+    width: 45%;
     list-style-type: none;
     margin: 1%;
     padding: 2%;
@@ -189,19 +174,35 @@ a:hover {
     padding-right: 10%;
 }
 
-#committers {
-    float: left;
-    width: 80%;
-    margin: 0 auto;
-    margin-left: 10%;
-    margin-bottom: 10%;
+i.fa.fa-code-fork {
+    padding-bottom: 3%;
+}
+
+.committers {
+    border-top: 1px solid #0000001a;
+    padding-top: 5%;
 }
 
 .committerImg {
-    width: 50%;
+    width: 25%;
     display: block;
-    float: left;
-    margin-right: 10%;
+    margin-top: 2%;
+    border-radius: 5px;
+}
+
+.committerHtml {
+    text-decoration: none;
+    color: #6d1010;
+    font-size: 0.9rem;
+}
+
+.committerBy {
+    font-size: 0.9rem;
+    margin-bottom: 1%;
+    display: block;
+    color: #b7b0ac;
+    font-size: 0.7rem;
+    text-decoration-line: underline;
 }
 
 .committerItem {
@@ -213,9 +214,37 @@ a:hover {
     border-bottom: 1px solid #b7b0b2;
 }
 
-.committerItem a {
-    text-transform: capitalize;
-    font-size: 72%;
-    display: block;
-    padding-top: 5%;
+@media only screen and (max-width: 850px) {
+    .reposListItem {
+        width: 100%;
+    }
+    #user {
+        width: 30%;
+    }
+    #repos {
+        width: 65%;
+    }
+    .userCard button {
+        width: 100%;
+    }
+    .userCard button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title {
+        font-size: 0.7rem;
+    }
+    .userCard button {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    #search {
+        width: 20%;
+    }
+    #searchUser {
+        width: 50%;
+    }
 }
