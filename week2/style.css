@@ -153,6 +153,7 @@ a:hover {
 .reposListItem {
     float: left;
     width: 45%;
+    height: 110vh;
     list-style-type: none;
     margin: 1%;
     padding: 2%;
@@ -181,6 +182,8 @@ i.fa.fa-code-fork {
 .committers {
     border-top: 1px solid #0000001a;
     padding-top: 5%;
+    margin-left: 1%;
+    margin-bottom: 2%;
 }
 
 .committerImg {
@@ -213,10 +216,15 @@ i.fa.fa-code-fork {
     list-style-type: none;
     border-bottom: 1px solid #b7b0b2;
 }
-
+@media only screen and (max-width: 950px) {
+    .reposListItem {
+        height: 95vh;
+    }
+}
 @media only screen and (max-width: 850px) {
     .reposListItem {
         width: 100%;
+        height: 125vh;
     }
     #user {
         width: 30%;
@@ -233,7 +241,26 @@ i.fa.fa-code-fork {
     }
 }
 
+/* @media only screen and (max-width: 850px) {
+    .reposListItem {
+        height: 115vh;
+    }
+} */
+@media only screen and (max-width: 750px) {
+    .reposListItem {
+        height: 110vh;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .reposListItem {
+        height: 96vh;
+    }
+}
+
 @media only screen and (max-width: 500px) {
+    .reposListItem {
+        height: 86vh;
+    }
     .title {
         font-size: 0.7rem;
     }
@@ -246,5 +273,10 @@ i.fa.fa-code-fork {
     }
     #searchUser {
         width: 50%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .reposListItem {
+        height: 70vh;
     }
 }
