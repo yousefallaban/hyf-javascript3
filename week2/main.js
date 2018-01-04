@@ -1,9 +1,8 @@
 window.onload = init;
-
 function init() {
     document.querySelector('#search')
         .addEventListener('click', githubUserSearch, false);
-    document.querySelector('#searchUser').addEventListener('keypress', function (e) {
+    document.querySelector('#searchUser').addEventListener('keypress',(e)=> {
        if (e.keyCode === 13) {
            e.preventDefault();
            githubUserSearch();
@@ -15,22 +14,23 @@ function githubUserSearch() {
     let userName = document.querySelector('#searchUser').value;
     let userUrl = 'https://api.github.com/users/' + userName;
     let repoUrl = 'https://api.github.com/users/' + userName + '/repos';
-    getUser(userUrl, function (user) {
-        console.log(user);
-        userInfo(user, userName)
-
-    });
-    getUserRepos(repoUrl, function (repos) {
-        console.log(repos);
-        repoInfo(repos)
-        for (let i = 0; i < repos.length; i++) {
-            const reposName = repos[i].name;
-            getCommitters(reposName, userName, function (commits) {
-                console.log(commits);
-                commitInfo(commits)
-            });
-        }
-    });
+    if (userName !== "") {
+        getUser(userUrl, function (user) {
+            console.log(user);
+            userInfo(user, userName)
+        });
+        getUserRepos(repoUrl, function (repos) {
+            console.log(repos);
+            repoInfo(repos)
+            for (let i = 0; i < repos.length; i++) {
+                const reposName = repos[i].name;
+                getCommitters(reposName, userName, function (commits) {
+                    console.log(commits);
+                    commitInfo(commits)
+                });
+            }
+        });
+    } 
 }
 // Binding userInfo to the DOM
 function userInfo(user) {
@@ -72,13 +72,13 @@ function repoInfo(repos) {
 function commitInfo(commits) {
     console.log(commits);
     let html = '';
-    let committer = commits.commits[0].committer;
+    let committer = commits.commits[0];
     if (committer !== null) {
-        let committerName = committer.login;
-        let imgUrl = committer.avatar_url;
+        let committerName = committer.commit.author.name;
+        let imgUrl = committer.author.avatar_url;
         html += `<p class="committerBy"><i class="fa fa-commenting" aria-hidden="true"></i>Recent committers</p>
-     <i class="fa fa-user" aria-hidden="true"></i> <a class="committerHtml" href="${committer.html_url}" target="_blank" >${committerName}</a>
-        <a href="${committer.html_url}" target="_blank"><img class="committerImg" src ="${imgUrl}"/></a>`
+        <i class="fa fa-user" aria-hidden="true"></i><a class="committerHtml" href="${committer.author.html_url}" target="_blank" >${committerName}</a>
+        <a href="${committer.author.html_url}" target="_blank"><img class = "committerImg" src="${imgUrl}" /></a>`
         let div = document.createElement('div');
         div.setAttribute('class', 'committers')
         div.innerHTML = html;

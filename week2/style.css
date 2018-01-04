@@ -6,7 +6,11 @@ body {
     font-family: 'Fira Sans', sans-serif;
     font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
-
+.errorMessage{
+    margin: 2%;
+    color: red;
+    text-align: center;
+}
 /*------.menu-header------------*/
 
 .container {
