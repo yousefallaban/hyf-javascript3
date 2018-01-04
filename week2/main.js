@@ -4,6 +4,12 @@ function init() {
     document.querySelector('#search')
         .addEventListener('click', githubUserSearch, false);
 }
+function handle(e) {
+    if (e.keyCode === 13) {
+        e.preventDefault(); 
+        githubUserSearch();
+    }
+};
 // search for users
 function githubUserSearch() {
     let userName = document.querySelector('#searchUser').value;
