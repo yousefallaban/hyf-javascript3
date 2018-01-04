@@ -3,13 +3,13 @@ window.onload = init;
 function init() {
     document.querySelector('#search')
         .addEventListener('click', githubUserSearch, false);
+    document.querySelector('#searchUser').addEventListener('keypress', function (e) {
+       if (e.keyCode === 13) {
+           e.preventDefault();
+           githubUserSearch();
+       }
+    });
 }
-function handle(e) {
-    if (e.keyCode === 13) {
-        e.preventDefault(); 
-        githubUserSearch();
-    }
-};
 // search for users
 function githubUserSearch() {
     let userName = document.querySelector('#searchUser').value;
